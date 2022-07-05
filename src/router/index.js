@@ -1,19 +1,47 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import home from "../views/home.vue";
-import singlelabel from "../views/singlelabel.vue";
+import search from "../views/search.vue";
+import nav from "../views/nav.vue";
+import amount1 from "../views/amount1.vue";
+import amount2 from "../views/amount2.vue";
+import amount3 from "../views/amount3.vue";
 Vue.use(VueRouter);
 const routes=[
+
+    {
+        path: "/nav",
+    name: "nav",
+    component: nav,
+    children:[
+        {
+            path: "/amount1" ,
+            name:"amount1",
+            component:amount1
+           },
+           {
+            path: "/amount2" ,
+            name:"amount2",
+            component:amount2
+           },
+           {
+            path: "/amount3" ,
+            name:"amount3",
+            component:amount3
+           },
+           {
+            path: "/search" ,
+            name:"search",
+            component:search
+           },
+    ]
+ },
     {path: "/",
     name: "home",
     component: home, 
    
 },
-{
-    path: "/singlelabel" ,
-    name:"singlelabel",
-    component:singlelabel
-   },
+
 
 
 ];

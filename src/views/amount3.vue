@@ -1,7 +1,18 @@
 <template>
-  
-  <div><ve-pie :data="类别2" :settings="pieSet"></ve-pie>
-  <ve-line :data="chartData" :settings="chartSettings"></ve-line></div>
+<div ><el-row :gutter="10">
+          <el-col :span="6" style="width: 420px"
+            ><div class="grid-content bg-purple">
+              <el-card shadow="always">
+                <ve-pie :data="类别2" :settings="pieSet"></ve-pie>
+              </el-card></div
+          ></el-col>
+          <el-col :span="6" style="  margin-left: 20px;" 
+            ><div class="grid-content bg-purple">
+              <el-card shadow="always">
+                <ve-histogram :data="chartData" :settings="chartSettings"></ve-histogram>
+              </el-card></div
+          ></el-col>
+        </el-row></div>
 </template>
 <script>
 export default {
@@ -63,3 +74,30 @@ export default {
   }
 }
 </script>
+<style scoped>
+.el-row {
+  margin-bottom: 20px;
+
+}
+.el-col {
+  border-radius: 4px;
+  width: 500px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+</style>

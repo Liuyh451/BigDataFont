@@ -9,7 +9,7 @@
           <el-col :span="6" style="  margin-left: 20px;" 
             ><div class="grid-content bg-purple">
               <el-card shadow="always">
-                <ve-line :data="chartData" :settings="chartSettings"></ve-line>
+                <ve-histogram :data="chartData" :settings="chartSettings"></ve-histogram>
               </el-card></div
           ></el-col>
         </el-row></div>
@@ -22,9 +22,9 @@ export default {
         chartData: {
         columns: ['算法', 'precision', 'recall', 'F1score'],
         rows: [
-          { '算法': '随机森林', 'precision': 0.88, 'recall': 0.75, 'F1score': 0.82 },
-          { '算法': '决策树', 'precision': 0.80, 'recall': 0.74, 'F1score': 0.76 },
-          { '算法': 'SVM', 'precision': 0.95, 'recall': 0.89, 'F1score': 0.96 },
+          { '算法': '随机森林', 'precision': 0.68, 'recall': 0.75, 'F1score': 0.82 },
+          { '算法': '决策树', 'precision': 0.50, 'recall': 0.74, 'F1score': 0.66 },
+          { '算法': 'SVM', 'precision': 0.85, 'recall': 0.81, 'F1score': 0.86 },
           { '算法': '多层感知机', 'precision': 0.84, 'recall': 0.83, 'F1score': 0.89 },
           { '算法': '逻辑回归', 'precision': 0.77, 'recall': 0.86, 'F1score': 0.78 }
         ]
@@ -53,7 +53,7 @@ export default {
     var 类2={}
                 类2.columns=["number", "authentication"],
                 类2.rows=[]
-                let categorySecond={"categorySecond": {"政治新闻": 6542,"经济新闻": 8523,"法律新闻": 3512,"军事新闻": 7434,"科技新闻": 3568,"文教新闻": 2562,"体育新闻": 4562,"社会新闻": 5587}}
+                let categorySecond={"categorySecond": {"政治新闻": 152,"经济新闻": 223,"法律新闻": 112,"军事新闻": 134,"科技新闻": 268,"文教新闻": 156,"体育新闻": 62,"社会新闻": 187}}
                 var c2=categorySecond.categorySecond
                 var namearray=Object.keys(c2);
                 console.log(namearray);

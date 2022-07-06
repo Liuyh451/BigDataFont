@@ -40,12 +40,12 @@
         margin: auto;
     }
     .导航栏{
-        width: 20%;
+        width: 18%;
         float: left;
         display:inline;
     }
     .menu-right{
-        margin-left:270px;
+        margin-left:250px;
     }
     .左侧菜单{
         /* float:left; */

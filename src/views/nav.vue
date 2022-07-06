@@ -17,7 +17,7 @@
                         <span>导航一</span>
                     </template>
                     <el-menu-item index="/amount1">训练集量为1000</el-menu-item>
-                    <el-menu-item index="/amount2">训练集量为10000</el-menu-item>
+                    <el-menu-item index="/amount2">训练集量为5000</el-menu-item>
                     <el-menu-item index="/amount3">训练集量为10000</el-menu-item>
                 </el-submenu>
                 <el-submenu index="2">
@@ -25,7 +25,6 @@
                         <i class="el-icon-location"></i>
                         <span>导航二</span>
                     </template>
-                    <el-menu-item index="/">home</el-menu-item>
                     <el-menu-item index="/search">搜索</el-menu-item>
                     
                 </el-submenu>

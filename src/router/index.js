@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import home from "../views/home.vue";
 import search from "../views/search.vue";
 import nav from "../views/nav.vue";
 import amount1 from "../views/amount1.vue";
@@ -10,7 +9,7 @@ Vue.use(VueRouter);
 const routes=[
 
     {
-        path: "/nav",
+        path: "/",
     name: "nav",
     component: nav,
     children:[
@@ -35,15 +34,7 @@ const routes=[
             component:search
            },
     ]
- },
-    {path: "/",
-    name: "home",
-    component: home, 
-   
-},
-
-
-
+ },  
 ];
 const router = new VueRouter({
     mode: "history",

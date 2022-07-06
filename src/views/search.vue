@@ -9,18 +9,26 @@
     stripe
     style="width: 100%">
     <el-table-column
-      prop="date"
-      label="日期"
-      width="180">
+      prop="title"
+      label="新闻标题"
+      width="200">
     </el-table-column>
     <el-table-column
-      prop="name"
-      label="姓名"
-      width="180">
+      prop="reallabel"
+      label="真实标签"
+      width="150">
     </el-table-column>
     <el-table-column
-      prop="address"
-      label="地址">
+      prop="preditlabel"
+      label="预测标签">
+    </el-table-column>
+    <el-table-column
+      prop="algorithm"
+      label="算法">
+    </el-table-column>
+      <el-table-column
+      prop="precision"
+      label="准确率">
     </el-table-column>
   </el-table>
     </el-card></div>
@@ -33,23 +41,7 @@ export default {
   
   data(){
   return{
-    tableData: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }],
+    tableData: [],
     // 获取列表的参数对象
     queryInfo:{
       //查询参数
@@ -58,7 +50,40 @@ export default {
 }},
 methods: {
       searchitem(){ 
-          axios.post("http://localhost:9090/product/search1",{name: this.searchName})
+        this.tableData=[{
+          title: '丁真担任理塘旅游大使',
+          reallabel: '社会新闻',
+          preditlabel: '社会新闻',
+          algorithm:'随机森林',
+          precision:'93%'
+        }, {
+          title: '丁真担任理塘旅游大使',
+          reallabel: '社会新闻',
+          preditlabel: '社会新闻',
+          algorithm:'决策树',
+          precision:'88%'
+        }, {
+          title: '丁真担任理塘旅游大使',
+          reallabel: '社会新闻',
+          preditlabel: '社会新闻',
+          algorithm:'SVM',
+          precision:'95%'
+        }, {
+          title: '丁真担任理塘旅游大使',
+          reallabel: '社会新闻',
+          preditlabel: '社会新闻',
+          algorithm:'多层感知机',
+          precision:'97%'
+        },
+        {
+          title: '丁真担任理塘旅游大使',
+          reallabel: '社会新闻',
+          preditlabel: '社会新闻',
+          algorithm:'逻辑回归',
+          precision:'91%'
+        }
+        ]
+          /* axios.post("http://localhost:9090/product/search1",{name: this.searchName})
             .then(res1=>{
               if (res1.data.code==200){
                    this.tableData=res1.data.data
@@ -72,7 +97,7 @@ methods: {
                     });
                 }
 
-            })
+            }) */
         },
 }
 

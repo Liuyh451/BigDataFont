@@ -22,11 +22,10 @@ export default {
         chartData: {
         columns: ['算法', 'precision', 'recall', 'F1score'],
         rows: [
-          { '算法': '随机森林', 'precision': 0.68, 'recall': 0.75, 'F1score': 0.82 },
-          { '算法': '决策树', 'precision': 0.50, 'recall': 0.74, 'F1score': 0.66 },
-          { '算法': 'SVM', 'precision': 0.85, 'recall': 0.81, 'F1score': 0.86 },
-          { '算法': '多层感知机', 'precision': 0.84, 'recall': 0.83, 'F1score': 0.89 },
-          { '算法': '逻辑回归', 'precision': 0.77, 'recall': 0.86, 'F1score': 0.78 }
+          { '算法': '随机森林', 'precision': 0.467787, 'recall': 0.467787, 'F1score': 0.442159 },
+          { '算法': '贝叶斯', 'precision': 0.59944, 'recall': 0.59944, 'F1score': 0.599174 },
+          { '算法': 'TFID', 'precision': 0.535014, 'recall': 0.553104, 'F1score': 0.534587 },
+          { '算法': '逻辑回归', 'precision': 0.622951, 'recall': 0.652951, 'F1score': 0.62268 }
         ]
       },
       pieSet: {
@@ -53,7 +52,7 @@ export default {
     var 类2={}
                 类2.columns=["number", "authentication"],
                 类2.rows=[]
-                let categorySecond={"categorySecond": {"政治新闻": 152,"经济新闻": 223,"法律新闻": 112,"军事新闻": 134,"科技新闻": 268,"文教新闻": 156,"体育新闻": 62,"社会新闻": 187}}
+                let categorySecond={"categorySecond": {"World": 352,"Sports": 223,"Business": 389,"Sci/Tech": 270}}
                 var c2=categorySecond.categorySecond
                 var namearray=Object.keys(c2);
                 console.log(namearray);

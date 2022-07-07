@@ -36,11 +36,14 @@
 </template>
 
 <script>
-
+const axios = require('axios');
 export default {
+
   
   data(){
   return{
+    
+
     tableData: [],
     // 获取列表的参数对象
     queryInfo:{
@@ -83,7 +86,7 @@ methods: {
           precision:'91%'
         }
         ]
-          /* axios.post("http://localhost:9090/product/search1",{name: this.searchName})
+          axios.post("http://82.157.236.220:8000/data/News/", {Title:22,type:33})
             .then(res1=>{
               if (res1.data.code==200){
                    this.tableData=res1.data.data
@@ -97,7 +100,7 @@ methods: {
                     });
                 }
 
-            }) */
+            })
         },
 }
 
